@@ -18,9 +18,11 @@ border:1px solid red;
 `
 
 export const SpanLabel = styled.span`
+
 `
 
 export const SpanPercentage = styled.span`
+
 `
 
  

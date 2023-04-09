@@ -6,10 +6,12 @@ padding:20px 50px;
 list-style-type: none;
 text-decoration: none;
 font-size:20px;
+
 `
 export const FriendLi = styled.li`
 display:flex;
 margin-bottom:20px;
+border-bottom:1px solid black;
 `
 
 export const FriendName = styled.p`
