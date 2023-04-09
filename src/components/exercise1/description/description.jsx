@@ -11,8 +11,8 @@ import PropTypes from 'prop-types';
           alt="User avatar"
         />
         <BigFont  >{username}</BigFont>
-        <p  >{tag}</p>
-        <p  >{location}</p>
+        <p>@{tag}</p>
+        <p>{location}</p>
       </Info>
     )
 }
