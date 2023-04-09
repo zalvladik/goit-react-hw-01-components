@@ -12,4 +12,5 @@ export const TbodyTd = styled.td`
 text-align: left;
 border-bottom:1px solid black;
 padding-bottom:5px;
+font-size:20px;
 `
