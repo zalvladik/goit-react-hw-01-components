@@ -7,13 +7,12 @@ import {Exercise2card} from './exercise2Styled'
 export const Exercise2 = () => {
     return(
       <Exercise2card>
-       <TitleContainer
+       <TitleContainer 
        />
        <StatListContainer
-       label={dataInfo.label}
-       percentage={dataInfo.percentage}
+       events={dataInfo}
        />
      </Exercise2card>
      
     )
-  };
+};
