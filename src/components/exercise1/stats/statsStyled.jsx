@@ -6,6 +6,7 @@ export const QuantityContainer = styled.ul`
     text-decoration: none;
     display:flex;
     padding-left:0px;
+    background-color:#574545;
     
 `
 
@@ -14,5 +15,6 @@ display:flex;
 flex-direction:column;
 text-align:center;
 font-size:20px;
-width:calc(100%/3)
+width:calc(100%/3);
+border:1px solid black;
 `

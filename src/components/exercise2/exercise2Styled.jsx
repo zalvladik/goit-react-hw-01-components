@@ -4,5 +4,4 @@ export const Exercise2card = styled.div`
 margin-top:50px;
 background-color: gray;
 text-align:center;
-padding-bottom:20px;
 `
