@@ -19,8 +19,9 @@ margin-left:15px;
 `
 
 export const SpanOnline = styled.span`
-width:10px;
-height:10px;
+width:15px;
+height:15px;
+border-radius: 50%;
 background-color: ${props =>{
      switch(props.isOnline){
         case true:
