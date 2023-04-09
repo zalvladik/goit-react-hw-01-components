@@ -1,16 +1,12 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import {Exercise1} from './exercise1/exercise1'
+import {Exercise2} from './exercise2/exercise2'
+import {AppCard} from './appStyled'
+
+export default function App() {
+    return(
+      <AppCard>
+       <Exercise1 />
+       <Exercise2 />
+     </AppCard>
+    )
+  };
