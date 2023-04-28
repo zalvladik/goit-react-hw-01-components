@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
  const DescriptionContainer = ({avatar,username,tag,location}) => {
-  
+
     return(
         <Info>
         <IMG 
@@ -18,9 +18,10 @@ import PropTypes from 'prop-types';
 }
 
 DescriptionContainer.propTypes = {
-  tag: PropTypes.string,
-  lication:PropTypes.string,
-  username:PropTypes.string,
+  avatar: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location:PropTypes.string.isRequired,
+  username:PropTypes.string.isRequired,
 }
 
 export default DescriptionContainer;

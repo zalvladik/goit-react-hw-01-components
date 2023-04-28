@@ -1,28 +1,31 @@
 import {FriendCard,FriendLi,FriendName,SpanOnline} from './FriendListItemStyled'
 import PropTypes from 'prop-types'
 
-const FriendListItem = ({events}) => {
-  
+const FriendListItem = ({friends}) => {
+
     return(
       <FriendCard>
-    {events.map(event => (
-      <FriendLi key={event.id} >
-      <SpanOnline isOnline={event.isOnline}></SpanOnline>
-      <img src={event.avatar} alt="User avatar" width="48" />
-      <FriendName >{event.name}</FriendName>
+    {friends.map(friend => (
+      <FriendLi key={friend.id} >
+      <SpanOnline isOnline={friend.isOnline}></SpanOnline>
+      <img src={friend.avatar} alt="User avatar" width="48" />
+      <FriendName >{friend.name}</FriendName>
     </FriendLi>
     ))}
 </FriendCard>
     )
 }
 
-FriendListItem.propTypes = {
-   id: PropTypes.number,
-   isOnline: PropTypes.bool,
-   avatar: PropTypes.object,
-   name: PropTypes.string,
+FriendListItem.propTypes ={
+  friends:PropTypes.arrayOf(
+    PropTypes.exact({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired
+    })
+  )
 }
-
 
 export default FriendListItem;
 

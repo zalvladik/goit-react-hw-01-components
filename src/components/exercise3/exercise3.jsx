@@ -1,5 +1,5 @@
 import FriendListItem from './friendListItem/FriendListItem';
-import friendInfo from './friendInfo/friends';
+import friends from './friends/friends.json';
 
 import {Exercise3card} from './exercise3Styled'
 
@@ -7,7 +7,7 @@ export const Exercise3 = () => {
     return(
       <Exercise3card>
         <FriendListItem
-        events={friendInfo}/>
+        friends={friends} />
      </Exercise3card>
      
     )

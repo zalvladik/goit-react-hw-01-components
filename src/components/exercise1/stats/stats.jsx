@@ -1,31 +1,31 @@
 import {QuantityContainer,Quantity} from './statsStyled'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-
-const StatsContainer = ({followers,views,likes}) => {
+const StatsContainer = ({stats}) => {
     return(
         <QuantityContainer>
     <Quantity>
       <span >Followers</span>
-      <span >{followers}</span>
+      <span >{stats.followers}</span>
     </Quantity>
     <Quantity>
       <span >Views</span>
-      <span >{views}</span>
+      <span >{stats.views}</span>
     </Quantity>
     <Quantity>
       <span >Likes</span>
-      <span  >{likes}</span>
+      <span  >{stats.likes}</span>
     </Quantity>
   </QuantityContainer>
     )
 }
 
 StatsContainer.propTypes = {
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
-
+  stats: PropTypes.exact({
+    followers:PropTypes.number.isRequired,
+    views:PropTypes.number.isRequired,
+    likes:PropTypes.number.isRequired,
+    })
 }
 
 export default StatsContainer;

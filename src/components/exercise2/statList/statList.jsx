@@ -1,16 +1,15 @@
 import {StatListCard,LiItem,SpanLabel,SpanPercentage} from './statListStyled'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-
-const StatListContainer = ({events}) => {
+const StatListContainer = ({stats}) => {
   
     return(
         <StatListCard>
     
-    {events.map(event => (
-      <LiItem key={event.id}>
-      <SpanLabel>{event.label}</SpanLabel>
-      <SpanPercentage>{event.percentage}%</SpanPercentage>
+    {stats.map(stat => (
+      <LiItem key={stat.id}>
+      <SpanLabel>{stat.label}</SpanLabel>
+      <SpanPercentage>{stat.percentage}%</SpanPercentage>
       </LiItem>
     ))}
       
@@ -21,8 +20,13 @@ const StatListContainer = ({events}) => {
 }
 
 StatListContainer.propTypes = {
-  label: PropTypes.string,
-  percentage:PropTypes.number,
+  stats:PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  )
 }
 
 export default StatListContainer;

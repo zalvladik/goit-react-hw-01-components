@@ -1,6 +1,6 @@
 import Tbody from './tbody/tbody';
 import Thead from './thead/thead';
-import tranasction from './transactionInfo/transactions';
+import transactions from './transactions/transactions';
 
 import {Exercise4card} from './exercise4Styled'
 
@@ -9,7 +9,7 @@ export const Exercise4 = () => {
       <Exercise4card>
         <Thead/>
         <Tbody
-        events={tranasction}
+        items={transactions} 
         />
      </Exercise4card>
      

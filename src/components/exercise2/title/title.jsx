@@ -1,9 +1,14 @@
 import {TitleCard} from './titleStyled'
+import PropTypes from 'prop-types'
 
-const TitleContainer = () => {
+const TitleContainer = ({title}) => {
     return(
-        <TitleCard>Upload stats</TitleCard>
+        <TitleCard>{title}</TitleCard>
     )
+}
+
+TitleContainer.propTypes ={
+    title:PropTypes.string,
 }
 
 export default TitleContainer;
