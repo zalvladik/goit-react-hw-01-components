@@ -1,15 +1,14 @@
 import Tbody from './tbody/tbody';
 import Thead from './thead/thead';
-import transactions from './transactions/transactions';
 
-import {Exercise4card} from './exercise4Styled'
+import {Exercise4card} from './transactionHistoryStyled'
 
-export const Exercise4 = () => {
+export const TransactionHistory = ({items}) => {
     return(
       <Exercise4card>
         <Thead/>
         <Tbody
-        items={transactions} 
+        items={items} 
         />
      </Exercise4card>
      

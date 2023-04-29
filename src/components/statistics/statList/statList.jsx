@@ -2,7 +2,7 @@ import {StatListCard,LiItem,SpanLabel,SpanPercentage} from './statListStyled'
 import PropTypes from 'prop-types'
 
 const StatListContainer = ({stats}) => {
-  
+
     return(
         <StatListCard>
     
